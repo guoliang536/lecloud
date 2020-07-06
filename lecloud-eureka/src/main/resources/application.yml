@@ -1,0 +1,17 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: @pom.artifactId@
+eureka:
+  server:
+    #    关闭注册中心的保护机制（开发阶段建议关闭，线上阶段建议开启）
+    enable-self-preservation: false
+  instance:
+    hostname: localhost
+  client:
+    #    不注册自己
+    register-with-eureka: false
+    #    eureka server的应用注册地址
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
