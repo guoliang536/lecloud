@@ -1,0 +1,11 @@
+server:
+  port: 8700
+
+spring:
+  application:
+    name: @pom.artifactId@
+  cloud:
+    config:
+      server:
+        git:
+
